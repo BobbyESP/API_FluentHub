@@ -23,7 +23,7 @@ Router.post("/", async (req, res)=> {
         return;
     }
     
-    const token = jwt.sign({
+    const token = jsonwebtoken.sign({
         id: app._id
     }, "jwtPrivateKey", { expiresIn: "15m"});
 
